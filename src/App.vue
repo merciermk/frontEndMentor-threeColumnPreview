@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div id="treeColumns">
+      
+        <column-left></column-left>
+        <column-center ></column-center>
+        <column-right ></column-right>
+  
+    </div>
+    <myFooter></myFooter>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import columnLeft from "./components/columnLeft.vue";
+import columnCenter from "./components/columnCenter.vue";
+import columnRight from "./components/columnRight.vue";
+import myFooter from "./components/myfooter";
 
 export default {
-  name: 'App',
+  data() {
+    return {};
+  },
   components: {
-    HelloWorld
-  }
-}
+    myFooter,
+    columnLeft,
+    columnCenter,
+    columnRight,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
